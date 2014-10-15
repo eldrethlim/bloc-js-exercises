@@ -19,19 +19,8 @@ module.exports.checkLock = function(num1,num2,num3,num4){
 };
   
 module.exports.canIGet = function(item,money){
-  if (item == "MacBook Air" && money >= 999) {
-    return true;
-  }
-  else if (item == "MacBook Pro" && money >= 1299) {
-    return true;
-  }
-  else if (item == "Mac Pro" && money >= 2499) {
-    return true;
-  }
-  else if (item == "Apple Sticker" && money >= 1) {
-    return true;
-  }
-  else {
-    return false;
-  }
+  return (item == "MacBook Air" && money >= 999) ||
+    (item == "MacBook Pro" && money >= 1299) ||
+    (item == "Mac Pro" && money >= 2499) ||
+    (item == "Apple Sticker" && money>=1);
 };
