@@ -1,12 +1,12 @@
 module.exports.stream = function(conditionalFn, actionFn){
-  while (conditionalFn() == true) {
+  while (conditionalFn()) {
     actionFn();
   };
 };
 
 module.exports.sumNumbers = function(array){
-  x = 0;
-  sum = 0;
+  var x = 0;
+  var sum = 0;
   while (x < array.length) {
     sum += array[x];
     x += 1;

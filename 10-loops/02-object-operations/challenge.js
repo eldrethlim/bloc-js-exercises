@@ -14,19 +14,13 @@ module.exports.extend = function(dest, src){
 };
 
 module.exports.hasElems = function(object, array){
-  counter = 0;
-  for (var property in object) {
-    for (i = 0; i < array.length; i++) {
-      if (property == array[i]) {
-        counter += 1;
-      }
-    };
-  };
+  var counter = 0;
 
-  if (counter < array.length) {
-    return false;
+  for (i = 0; i < array.length; i++) {
+    if (object.hasOwnProperty(array[i])) {
+      counter += 1;
+    }
   }
-  else {
-    return true;
-  }
+
+  return (counter == array.length);
 };

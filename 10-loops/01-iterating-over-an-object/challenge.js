@@ -1,5 +1,5 @@
 module.exports.getKeys = function(object){
-  array = [];
+  var array = [];
   for (var property in object) {
     array.push(property);
   }
@@ -7,7 +7,7 @@ module.exports.getKeys = function(object){
 };
 
 module.exports.getValues = function(object){
-  array = [];
+  var array = [];
   for (var property in object) {
     array.push(object[property]);
   }
@@ -15,7 +15,7 @@ module.exports.getValues = function(object){
 }
 
 module.exports.objectToArray = function(object){
-  array = [];
+  var array = [];
   for (var property in object) {
     array.push(property + " is " + object[property]);
   }

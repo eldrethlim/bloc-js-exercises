@@ -7,12 +7,11 @@ module.exports.sumNumbers = function(array){
 };
 
 module.exports.splitAndLowerCaseString = function(inputString) {
-  array = inputString.toLowerCase().split(",");
-  return array;
+  return inputString.toLowerCase().split(",");
 };
 
 module.exports.addIndex = function(array) {
-  index = [];
+  var index = [];
   for (i = 0; i < array.length; i++) {
     index[i] = i + " is " + array[i];
   }
